@@ -4,10 +4,10 @@
 namespace App\Controller\Main;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends BaseController
+class MainController extends BaseController
 {
     /**
-     * @Route("/", name = "home")
+     * @Route("/", name = "main")
      */
     public function index(){
         $forRender = parent::renderDefault();

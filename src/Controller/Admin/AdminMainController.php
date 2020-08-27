@@ -4,10 +4,10 @@
 namespace App\Controller\Admin;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AdminHomeController extends AdminBaseController
+class AdminMainController extends AdminBaseController
 {
     /**
-     * @Route("/admin", name = "admin_home")
+     * @Route("/admin", name = "admin_main")
      */
     public function index(){
         $forRender = parent::renderDefault();
