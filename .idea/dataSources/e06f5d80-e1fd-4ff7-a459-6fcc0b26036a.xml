@@ -1079,13 +1079,14 @@
     <user id="345" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="346" parent="12" name="user">
+    <table id="346" parent="12" name="reset_password_request">
       <Engine>InnoDB</Engine>
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <check id="347" parent="346" name="roles">
-      <Predicate>json_valid(`roles`)</Predicate>
-    </check>
+    <table id="347" parent="12" name="user">
+      <Engine>InnoDB</Engine>
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
     <column id="348" parent="346" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
@@ -1093,42 +1094,98 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="349" parent="346" name="email">
+    <column id="349" parent="346" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="350" parent="346" name="selector">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="351" parent="346" name="hashed_token">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="352" parent="346" name="requested_at">
+      <Position>5</Position>
+      <Comment>(DC2Type:datetime_immutable)</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="353" parent="346" name="expires_at">
+      <Position>6</Position>
+      <Comment>(DC2Type:datetime_immutable)</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="354" parent="346" name="IDX_7CE748AA76ED395">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="355" parent="346" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="356" parent="346" name="FK_7CE748AA76ED395">
+      <ColNames>user_id</ColNames>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <check id="357" parent="347" name="roles">
+      <Predicate>json_valid(`roles`)</Predicate>
+    </check>
+    <column id="358" parent="347" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="347" name="email">
       <Position>2</Position>
       <DataType>varchar(180)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="350" parent="346" name="roles">
+    <column id="360" parent="347" name="roles">
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8mb4_bin</Collation>
     </column>
-    <column id="351" parent="346" name="password">
+    <column id="361" parent="347" name="password">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="352" parent="346" name="is_verified">
+    <column id="362" parent="347" name="is_verified">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="353" parent="346" name="UNIQ_8D93D649E7927C74">
+    <index id="363" parent="347" name="UNIQ_8D93D649E7927C74">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="354" parent="346" name="PRIMARY">
+    <key id="364" parent="347" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="355" parent="346" name="UNIQ_8D93D649E7927C74">
+    <key id="365" parent="347" name="UNIQ_8D93D649E7927C74">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649E7927C74</UnderlyingIndexName>
     </key>
