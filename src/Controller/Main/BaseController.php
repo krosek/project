@@ -11,7 +11,7 @@ class BaseController extends AbstractController
     public function renderDefault()
     {
         return [
-            'title' => 'Homepage'
+            'title' => 'Welcome to the quiz universe'
         ];
     }
 
