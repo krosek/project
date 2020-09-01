@@ -19,7 +19,7 @@ use SymfonyCasts\Bundle\ResetPassword\Exception\ResetPasswordExceptionInterface;
 use SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface;
 
 /**
- * @Route("/reset-password", name = "app_reset")
+ * @Route("/reset-password")
  */
 class ResetPasswordController extends AbstractController
 {
@@ -151,10 +151,10 @@ class ResetPasswordController extends AbstractController
             // the lines below and change the redirect to 'app_forgot_password_request'.
             // Caution: This may reveal if a user is registered or not.
             //
-            // $this->addFlash('reset_password_error', sprintf(
-            //     'There was a problem handling your password reset request - %s',
-            //     $e->getReason()
-            // ));
+             $this->addFlash('reset_password_error', sprintf(
+                 'There was a problem handling your password reset request - %s',
+                 $e->getReason()
+             ));
 
             return $this->redirectToRoute('app_check_email');
         }

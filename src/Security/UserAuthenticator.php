@@ -73,6 +73,9 @@ class UserAuthenticator extends AbstractFormLoginAuthenticator implements Passwo
             // fail authentication with a custom error
             throw new CustomUserMessageAuthenticationException('Email could not be found.');
         }
+        elseif ($user->getStatus() == 'blocked') {
+            throw new CustomUserMessageAuthenticationException('Sorry, you are blocked');
+        }
 
         return $user;
     }
