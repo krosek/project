@@ -1,14 +1,6 @@
 {% extends 'main/base.html.twig' %}
 {% block body%}
-    <header>
-
-            <a href="{{ path('app_login') }}" type="button" class="btn btn-dark">SIGN IN</a>
-            <a href="{{ path('app_register') }}" type="button" class="btn btn-dark">SIGN UP</a>
-            <a href="{{ path('about') }}" type="button" class="btn btn-dark">ABOUT US</a>
-            <a href="{{ path('main') }}" type="button" class="btn btn-dark">CONTACTS</a>
-
-    </header>
-    <h1>{{ title }}</h1>
-
-
+    <div class="container">
+        <h1>{{ title }}</h1>
+    </div>
 {% endblock %}

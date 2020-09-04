@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainController extends BaseController
 {
     /**
-     * @Route("/", name = "main")
+     * @Route("/", name = "app_main")
      */
     public function index(){
         $forRender = parent::renderDefault();
