@@ -126,7 +126,7 @@ class User implements UserInterface
 
     public function isVerified(): bool
     {
-        return $this->isVerified;
+        return (bool) $this->isVerified;
     }
 
     public function setIsVerified(bool $isVerified): self
