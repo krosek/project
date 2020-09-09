@@ -1,5 +1,11 @@
 {% extends 'admin/adminbase.html.twig' %}
 {% block body%}
+    {% for message in app.flashes('notification') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     <h2>List of all users</h2>
     <table class="table table-striped">
         <thead>
@@ -24,6 +30,15 @@
                         <a href="{{ path('user_delete',{id: user.id}) }}">
                             DELETE
                         </a>
+                        {% if user.status is same as('active') %}
+                        <a href="{{ path('user_blocking',{id: user.id}) }}">
+                            BLOCK
+                        </a>
+                        {% else %}
+                        <a href="{{ path('user_unblocking',{id: user.id}) }}">
+                            UNBLOCK
+                        </a>
+                        {% endif %}
                     </td>
                 </tr>
             {% endfor %}

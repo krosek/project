@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a48848a3-8598-4c81-859d-a3074c0a3e3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/admin/users.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminMainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminMainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adminbase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminbase.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/users.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/users.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,8 +191,18 @@
       <workItem from="1598950612249" duration="8734000" />
       <workItem from="1599208614787" duration="10018000" />
       <workItem from="1599420534538" duration="5507000" />
-      <workItem from="1599499969136" duration="6421000" />
+      <workItem from="1599499969136" duration="6880000" />
+      <workItem from="1599586362370" duration="1242000" />
+      <workItem from="1599669940811" duration="5598000" />
     </task>
+    <task id="LOCAL-00001" summary="#10. Add output of all registered users into &quot;admin panel&quot;">
+      <created>1599506698872</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599506698872</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +219,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#10. Add output of all registered users into &quot;admin panel&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="#10. Add output of all registered users into &quot;admin panel&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="42" key="#Inspections" timestamp="1598527816155">
