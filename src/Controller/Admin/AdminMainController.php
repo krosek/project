@@ -4,6 +4,7 @@
 namespace App\Controller\Admin;
 use App\Entity\User;
 use App\Repository\UserRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,13 +22,19 @@ class AdminMainController extends AdminBaseController
     /**
      * @Route("/admin/users", name = "admin_users")
      * @param UserRepository $userRepository
+     * @param PaginatorInterface $paginator
+     * @param Request $request
      * @return Response
      */
-    public function createList(UserRepository $userRepository){
-        $users = $userRepository->findAll();
+    public function createList(UserRepository $userRepository, PaginatorInterface $paginator, Request $request){
+        $pagination = $paginator->paginate(
+            $userRepository->findAll(),
+            $request->query->getInt('page',1),
+            4
+        );
 
         return $this->render('admin/users.html.twig', [
-            'users'=>$users
+            'pagination'=>$pagination
         ]);
     }
 
