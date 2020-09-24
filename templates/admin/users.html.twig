@@ -9,17 +9,20 @@
     <h2>List of all users</h2>
     <table class="table table-striped">
         <thead>
+            <tr>{{ knp_pagination_filter(pagination, {
+                    'Id':'id',
+                }) }}</tr>
             <tr>
-                <td>ID</td>
-                <td>E-mail</td>
-                <td>Role</td>
-                <td>Is verified</td>
-                <td>Status</td>
-                <td>Actions</td>
+                <th>{{ knp_pagination_sortable(pagination, 'Id', 'id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'E-mail', 'email') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Role', 'roles') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Is verified', 'isVerified') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Status', 'status') }}</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            {% for user in users %}
+            {% for user in pagination %}
                 <tr>
                     <td>{{ user.id }}</td>
                     <td>{{ user.email }}</td>
@@ -44,4 +47,7 @@
             {% endfor %}
         </tbody>
     </table>
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
 {% endblock %}
