@@ -1,0 +1,12 @@
+{% extends 'admin/adminbase.html.twig' %}
+
+{% block body %}
+    {% for message in app.flashes('notification') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <div class="mb-3">
+        <a href="{{ path('create_question') }}">Create question</a>
+    </div>
+{% endblock %}

@@ -46,6 +46,21 @@ class User implements UserInterface
      */
     private $status;
 
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $surname;
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $middleName;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -144,6 +159,42 @@ class User implements UserInterface
     public function setStatus(string $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getSurname(): ?string
+    {
+        return $this->surname;
+    }
+
+    public function setSurname(string $surname): self
+    {
+        $this->surname = $surname;
+
+        return $this;
+    }
+
+    public function getMiddleName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setMiddleName(string $middleName): self
+    {
+        $this->middleName = $middleName;
 
         return $this;
     }

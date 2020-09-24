@@ -29,7 +29,7 @@
                                                 <a class="nav-link" href="">Quizzes</a>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link" href="">Questions</a>
+                                                <a class="nav-link" href="{{ path('question') }}">Questions</a>
                                         </li>
                                 </ul>
                                 <ul class="navbar-nav ml-auto" >
@@ -46,6 +46,16 @@
 {% endblock %}
 </header>
 <body>
-{% block body %}{% endblock %}
+        <div class="container">
+                {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}
+                <script
+                        src="https://code.jquery.com/jquery-3.5.1.js"
+                        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+                        crossorigin="anonymous">
+                </script>
+                <script src="{{ 'assets/js/app.js' }}"></script>
+        {% endblock %}
 </body>
 </html>
