@@ -1,0 +1,13 @@
+{% extends 'admin/adminbase.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_row(form.text) }}
+    <div class="col-sm-8 col-sm-offset-2" id="answer_list" data-prototype="{{ form_widget(form.answers.vars.prototype)|e('html_attr') }}">
+        {% for row in form.answers %}
+            <div id="answer">
+                {{ form_row(row) }}
+            </div>
+        {% endfor %}
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

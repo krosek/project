@@ -32,8 +32,8 @@ class Question
     /**
      * @ORM\OneToMany(targetEntity=Answer::class, mappedBy="question", cascade={"persist"})
      * @Assert\Count(
-     *     min = 2, minMessage="must be 2 or more aswers",
-     *     max = 6, maxMessage="must be 6 or less aswers"
+     *     min = 2, minMessage="must be 2 or more answers",
+     *     max = 6, maxMessage="must be 6 or less answers"
      * )
      */
     private $answers;

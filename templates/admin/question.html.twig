@@ -6,7 +6,40 @@
             {{ message }}
         </div>
     {% endfor %}
-    <div class="mb-3">
-        <a href="{{ path('create_question') }}">Create question</a>
+    <div class="col-4 mb-3">
+        <a href="{{ path('create_question') }}" class="btn btn-block btn-primary mt-5">Create question</a>
+    </div>
+
+    <h2 class="mb-2">List of all questions</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>{{ knp_pagination_filter(pagination, {
+                'Id':'id',
+            }) }}</tr>
+        <tr>
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 'id') }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Text', 'text') }}</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for question in pagination %}
+            <tr>
+                <td>{{ question.id }}</td>
+                <td>{{ question.text }}</td>
+                <td>
+                    <a href="{{ path('question_delete',{id: question.id}) }}">
+                        DELETE
+                    </a>|
+                    <a href="{{ path('question_edit',{id: question.id}) }}">
+                        EDIT
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
     </div>
 {% endblock %}

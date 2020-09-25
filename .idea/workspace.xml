@@ -33,6 +33,13 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -144,8 +151,8 @@
       <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
       <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gYnx4Y52LGsTpQyathE1iO95J4" />
@@ -165,15 +172,15 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\project\config\packages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\project\public\admin\assets" />
+      <recent name="C:\wamp64\www\project\public\admin" />
+      <recent name="C:\wamp64\www\project\public\assets\admin\js" />
       <recent name="C:\wamp64\www\project\templates\admin" />
       <recent name="C:\wamp64\www\project\src\Controller\Admin" />
-      <recent name="C:\wamp64\www\project\public" />
-      <recent name="C:\wamp64\www\project\src\Controller\Security" />
-      <recent name="C:\wamp64\www\project\src\Controller\Registration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\project\config\packages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
@@ -209,7 +216,9 @@
       <workItem from="1600365310918" duration="9633000" />
       <workItem from="1600714793767" duration="9373000" />
       <workItem from="1600882328985" duration="5983000" />
-      <workItem from="1600928412994" duration="9615000" />
+      <workItem from="1600928412994" duration="11931000" />
+      <workItem from="1600972757552" duration="4890000" />
+      <workItem from="1601019646550" duration="9207000" />
     </task>
     <task id="LOCAL-00001" summary="#10. Add output of all registered users into &quot;admin panel&quot;">
       <created>1599506698872</created>
@@ -245,14 +254,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1599741964216" />
+    <state x="59" y="205" key="#SQL_Dialects" timestamp="1601021339883">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="59" y="205" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1601021339883" />
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598796688977">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1598796688977" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600372504714">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600954321867">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600372504714" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600954321867" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1598457299097">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
