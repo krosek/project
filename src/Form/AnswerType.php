@@ -16,6 +16,9 @@ class AnswerType extends AbstractType
         $builder
             ->add('is_true', RadioType::class, [
                 'required' => false,
+                'attr' => [
+                    'onclick' => 'check(this)'
+                ],
             ])
             ->add('text', TextType::class)
         ;

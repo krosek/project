@@ -19,10 +19,11 @@ $(document).ready(function () {
         addNewForm();
     })
 
-    $('input[type=radio]').change(function() {
-        $('input[type=radio]:checked').not(this).prop('checked', false);
-    });
 });
+
+function check (element){
+    $('input[type=radio]:checked').not(element).prop('checked', false);
+}
 
 function addRemoveButton ($answer) {
     var $removeButton = $('<a href="#" class="btn btn-danger" style="margin-bottom: 40px">Remove</a>')
