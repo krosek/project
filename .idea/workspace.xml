@@ -20,9 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a48848a3-8598-4c81-859d-a3074c0a3e3f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminMainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminMainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/users.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/users.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +158,7 @@
       <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailgun-mailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gYnx4Y52LGsTpQyathE1iO95J4" />
@@ -170,6 +176,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config/packages" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -183,7 +190,7 @@
       <recent name="C:\wamp64\www\project\config\packages" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -219,6 +226,7 @@
       <workItem from="1600928412994" duration="11931000" />
       <workItem from="1600972757552" duration="4890000" />
       <workItem from="1601019646550" duration="9207000" />
+      <workItem from="1601145204037" duration="4221000" />
     </task>
     <task id="LOCAL-00001" summary="#10. Add output of all registered users into &quot;admin panel&quot;">
       <created>1599506698872</created>
@@ -227,11 +235,32 @@
       <option name="project" value="LOCAL" />
       <updated>1599506698872</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Heroku">
+      <created>1601146089010</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601146089010</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Change env to prod and uncomment mailer_dsn">
+      <created>1601147214134</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601147214134</updated>
+    </task>
+    <task id="LOCAL-00004" summary="changes to MAILER_DSN">
+      <created>1601148313483</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601148313483</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -247,7 +276,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="#10. Add output of all registered users into &quot;admin panel&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="#10. Add output of all registered users into &quot;admin panel&quot;" />
+    <MESSAGE value="Heroku" />
+    <MESSAGE value="Change env to prod and uncomment mailer_dsn" />
+    <MESSAGE value="changes to MAILER_DSN" />
+    <MESSAGE value="Add Mailgun" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Mailgun" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="42" key="#Inspections" timestamp="1599741964216">
