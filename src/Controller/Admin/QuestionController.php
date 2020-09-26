@@ -22,8 +22,15 @@ class QuestionController extends AdminBaseController
      */
     public function ListOfQuestions(QuestionRepository $questionRepository, PaginatorInterface $paginator, Request $request){
 
+        $queryBuilder = $questionRepository->createQueryBuilder('question');
+        if($request->query->getAlnum('filterValue')){
+            $queryBuilder->where('question.text LIKE :text')->setParameter('text', '%'. $request->query->getAlnum('filterValue') .'%')
+            ->orWhere('question.id LIKE :id')->setParameter('id', '%'. $request->query->getAlnum('filterValue') .'%');
+        }
+        $query = $queryBuilder->getQuery()->getResult();
+
         $pagination = $paginator->paginate(
-            $questionRepository->findAll(),
+            $query,
             $request->query->getInt('page',1),
             4
         );

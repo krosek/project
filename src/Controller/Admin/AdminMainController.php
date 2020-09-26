@@ -27,8 +27,18 @@ class AdminMainController extends AdminBaseController
      * @return Response
      */
     public function createList(UserRepository $userRepository, PaginatorInterface $paginator, Request $request){
+        $queryBuilder = $userRepository->createQueryBuilder('user');
+        if($request->query->getAlnum('filterValue')){
+            $queryBuilder->where('user.id LIKE :id')->setParameter('id', '%'. $request->query->getAlnum('filterValue') .'%')
+                ->orWhere('user.email LIKE :email')->setParameter('email', '%'. $request->query->getAlnum('filterValue') .'%')
+                ->orWhere('user.surname LIKE :surname')->setParameter('surname', '%'. $request->query->getAlnum('filterValue') .'%')
+                ->orWhere('user.name LIKE :name')->setParameter('name', '%'. $request->query->getAlnum('filterValue') .'%')
+                ->orWhere('user.middleName LIKE :middleName')->setParameter('middleName', '%'. $request->query->getAlnum('filterValue') .'%');
+        }
+        $query = $queryBuilder->getQuery()->getResult();
+
         $pagination = $paginator->paginate(
-            $userRepository->findAll(),
+            $query,
             $request->query->getInt('page',1),
             4
         );

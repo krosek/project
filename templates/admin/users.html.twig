@@ -11,10 +11,17 @@
         <thead>
             <tr>{{ knp_pagination_filter(pagination, {
                     'Id':'id',
+                    'Email': 'email',
+                    'SurName': 'surname',
+                    'Name': 'name',
+                    'MiddleName': 'middle name',
                 }) }}</tr>
             <tr>
                 <th>{{ knp_pagination_sortable(pagination, 'Id', 'id') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'E-mail', 'email') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'SurName', 'surname') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Name', 'name') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'MiddleName', 'middlename') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'Role', 'roles') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'Is verified', 'isVerified') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'Status', 'status') }}</th>
@@ -26,6 +33,9 @@
                 <tr>
                     <td>{{ user.id }}</td>
                     <td>{{ user.email }}</td>
+                    <td>{{ user.surname }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.middleName }} </td>
                     <td>{{ user.roles|join(" and ") }}</td>
                     <td>{{ user.isVerified }}</td>
                     <td>{{ user.status }}</td>

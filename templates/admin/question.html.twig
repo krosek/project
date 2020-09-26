@@ -13,7 +13,8 @@
     <h2 class="mb-2">List of all questions</h2>
     <table class="table table-striped">
         <thead>
-        <tr>{{ knp_pagination_filter(pagination, {
+        <tr>Search by: {{ knp_pagination_filter(pagination, {
+                'Text':'text',
                 'Id':'id',
             }) }}</tr>
         <tr>
