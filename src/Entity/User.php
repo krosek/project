@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -60,6 +62,16 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=20)
      */
     private $middleName;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Results::class, mappedBy="user")
+     */
+    private $results;
+
+    public function __construct()
+    {
+        $this->results = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -195,6 +207,37 @@ class User implements UserInterface
     public function setMiddleName(string $middleName): self
     {
         $this->middleName = $middleName;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Results[]
+     */
+    public function getResults(): Collection
+    {
+        return $this->results;
+    }
+
+    public function addResult(Results $result): self
+    {
+        if (!$this->results->contains($result)) {
+            $this->results[] = $result;
+            $result->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeResult(Results $result): self
+    {
+        if ($this->results->contains($result)) {
+            $this->results->removeElement($result);
+            // set the owning side to null (unless already changed)
+            if ($result->getUser() === $this) {
+                $result->setUser(null);
+            }
+        }
 
         return $this;
     }

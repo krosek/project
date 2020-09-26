@@ -38,9 +38,15 @@ class Question
      */
     private $answers;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Quiz::class, mappedBy="question")
+     */
+    private $quiz;
+
     public function __construct()
     {
         $this->answers = new ArrayCollection();
+        $this->quiz = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -86,6 +92,34 @@ class Question
             if ($answer->getQuestion() === $this) {
                 $answer->setQuestion(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Quiz[]
+     */
+    public function getQuiz(): Collection
+    {
+        return $this->quiz;
+    }
+
+    public function addQuiz(Quiz $quiz): self
+    {
+        if (!$this->quiz->contains($quiz)) {
+            $this->quiz[] = $quiz;
+            $quiz->addQuestion($this);
+        }
+
+        return $this;
+    }
+
+    public function removeQuiz(Quiz $quiz): self
+    {
+        if ($this->quiz->contains($quiz)) {
+            $this->quiz->removeElement($quiz);
+            $quiz->removeQuestion($this);
         }
 
         return $this;
