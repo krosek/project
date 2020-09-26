@@ -201,7 +201,7 @@ class User implements UserInterface
 
     public function getMiddleName(): ?string
     {
-        return $this->name;
+        return $this->middleName;
     }
 
     public function setMiddleName(string $middleName): self
